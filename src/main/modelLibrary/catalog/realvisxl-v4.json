@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "id": "realvisxl-v4",
+  "name": "RealVisXL V4.0",
+  "version": "RealVisXL V4.0 (SDXL)",
+  "summary": "A photorealistic Stable Diffusion XL model: portraits, people and natural light.",
+  "details": "A Stable Diffusion XL checkpoint tuned for photographic realism at about 1024 pixels. A step up in realism and resolution from Stable Diffusion 1.5, at a larger size and a higher memory need. Atlas uses it through the same ComfyUI generation as any checkpoint.",
+  "categories": [
+    "photoreal",
+    "generation"
+  ],
+  "capabilities": [
+    {
+      "id": "photoreal",
+      "label": "Photographic realism",
+      "level": "good"
+    },
+    {
+      "id": "text-to-image",
+      "label": "Pictures from a description",
+      "level": "good"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "RealVisXL V4.0 by SG161222 on Hugging Face",
+    "url": "https://huggingface.co/SG161222/RealVisXL_V4.0"
+  },
+  "licence": {
+    "name": "CreativeML Open RAIL++-M",
+    "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md",
+    "commercialUse": "conditions",
+    "summary": "Free to use, including commercially, with use restrictions (no harm, no unlawful use). Read the licence for the full list."
+  },
+  "files": [
+    {
+      "key": "realvisxl-v4",
+      "name": "RealVisXL_V4.0.safetensors",
+      "folder": "checkpoints",
+      "url": "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors",
+      "bytes": 6938040706,
+      "sha256": "912c9dc74f5855175c31a7993f863a043ac8dcc31732b324cd05d75cd7e16844"
+    }
+  ],
+  "requirements": {
+    "minMemoryGB": 6,
+    "recommendedMemoryGB": 10,
+    "archs": [
+      "x64"
+    ],
+    "os": [
+      "win32"
+    ],
+    "precision": "fp16"
+  },
+  "dependsOn": [],
+  "provides": [
+    "create"
+  ],
+  "workflows": [
+    {
+      "id": "atlas:generate",
+      "name": "Atlas image generation",
+      "task": "Create a picture from a prompt and your moodboard"
+    }
+  ],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "A copy exists in the test computer's own ComfyUI and Atlas recognises it there. Atlas has not generated pictures with it yet."
+  },
+  "install": {
+    "mode": "managed"
+  },
+  "added": "2026-11-20"
+}

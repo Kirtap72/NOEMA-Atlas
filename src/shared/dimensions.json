@@ -1,0 +1,158 @@
+[
+  {
+    "id": "surreal",
+    "axis": "reality",
+    "axisLabel": "Reality",
+    "pole": "a",
+    "label": "Surreal & dreamlike",
+    "description": "Impossible, symbolic or dreamlike scenes.",
+    "prompts": [
+      "a surreal, dreamlike image with impossible symbolic elements",
+      "a surrealist painting",
+      "a strange dream landscape"
+    ]
+  },
+  {
+    "id": "natural",
+    "axis": "reality",
+    "axisLabel": "Reality",
+    "pole": "b",
+    "label": "Natural & real",
+    "description": "Believable, photographic, true-to-life scenes.",
+    "prompts": [
+      "a realistic, natural photograph",
+      "a documentary photograph of a real place",
+      "a true-to-life, ordinary scene"
+    ]
+  },
+  {
+    "id": "abstract",
+    "axis": "form",
+    "axisLabel": "Form",
+    "pole": "a",
+    "label": "Abstract & geometric",
+    "description": "Shapes, patterns and structure more than subjects.",
+    "prompts": [
+      "an abstract image of geometric shapes and patterns",
+      "abstract art with clean forms",
+      "a pattern of lines and shapes"
+    ]
+  },
+  {
+    "id": "figurative",
+    "axis": "form",
+    "axisLabel": "Form",
+    "pole": "b",
+    "label": "Figurative & concrete",
+    "description": "Clearly recognisable subjects: people, places and things.",
+    "prompts": [
+      "a clear picture of recognisable people, places and objects",
+      "a figurative scene with a clear subject",
+      "a portrait or a scene with real objects"
+    ]
+  },
+  {
+    "id": "poetic",
+    "axis": "mood",
+    "axisLabel": "Mood",
+    "pole": "a",
+    "label": "Romantic & poetic",
+    "description": "Soft light, atmosphere, longing and quiet beauty.",
+    "prompts": [
+      "a romantic, poetic, atmospheric scene with soft misty light",
+      "a melancholic and beautiful landscape",
+      "a tender, lyrical image"
+    ]
+  },
+  {
+    "id": "dramatic",
+    "axis": "mood",
+    "axisLabel": "Mood",
+    "pole": "b",
+    "label": "Stark & dramatic",
+    "description": "Hard contrast, tension and bold statements.",
+    "prompts": [
+      "a stark, dramatic, high-contrast scene",
+      "an intense and powerful image",
+      "a bold, tense composition"
+    ]
+  },
+  {
+    "id": "dark",
+    "axis": "light",
+    "axisLabel": "Light",
+    "pole": "a",
+    "label": "Dark & moody",
+    "description": "Low-key images, deep shadow and night.",
+    "prompts": [
+      "a dark, moody, low-key image",
+      "a scene lit only by a little light in deep shadow",
+      "a night scene"
+    ]
+  },
+  {
+    "id": "bright",
+    "axis": "light",
+    "axisLabel": "Light",
+    "pole": "b",
+    "label": "Bright & luminous",
+    "description": "High-key images, sunlight and airy brightness.",
+    "prompts": [
+      "a bright, luminous, high-key image",
+      "a sunlit scene full of light",
+      "a light and airy picture"
+    ]
+  },
+  {
+    "id": "vivid",
+    "axis": "colour",
+    "axisLabel": "Colour",
+    "pole": "a",
+    "label": "Vivid & saturated",
+    "description": "Strong, rich, saturated colour.",
+    "prompts": [
+      "a vivid, highly saturated, colourful image",
+      "bold rich colours",
+      "a vibrant, colourful scene"
+    ]
+  },
+  {
+    "id": "muted",
+    "axis": "colour",
+    "axisLabel": "Colour",
+    "pole": "b",
+    "label": "Muted & quiet",
+    "description": "Restrained, desaturated or near-monochrome colour.",
+    "prompts": [
+      "a muted, desaturated image with soft colours",
+      "a monochrome black and white image",
+      "a quiet palette of greys and earth tones"
+    ]
+  },
+  {
+    "id": "minimal",
+    "axis": "composition",
+    "axisLabel": "Composition",
+    "pole": "a",
+    "label": "Minimal & calm",
+    "description": "Few elements, space to breathe, stillness.",
+    "prompts": [
+      "a minimalist, calm composition with a lot of empty space",
+      "a single subject on a quiet background",
+      "a simple, uncluttered image"
+    ]
+  },
+  {
+    "id": "rich",
+    "axis": "composition",
+    "axisLabel": "Composition",
+    "pole": "b",
+    "label": "Rich & intricate",
+    "description": "Dense detail, layers and ornament.",
+    "prompts": [
+      "a dense, intricate, richly detailed composition",
+      "an ornate scene full of detail and layers",
+      "a busy, elaborate image"
+    ]
+  }
+]

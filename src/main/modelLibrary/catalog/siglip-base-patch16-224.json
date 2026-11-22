@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "id": "siglip-base-patch16-224",
+  "name": "SigLIP base (image search and understanding)",
+  "version": "siglip-base-patch16-224, fp16 ONNX",
+  "summary": "The model behind Atlas’s “describe what you are looking for” search, families and taste.",
+  "details": "A vision-language model that places pictures and words in the same space. Atlas uses it on this computer to find pictures from a description, group them into named families, tell finished artwork from technical images and learn your taste. It does not write descriptions; it measures how well words and pictures match. It runs on the graphics card through DirectML or on the processor, and everything stays on this computer.",
+  "categories": [
+    "understanding"
+  ],
+  "capabilities": [
+    {
+      "id": "semantic-search",
+      "label": "Finds pictures from a description",
+      "level": "good"
+    },
+    {
+      "id": "classify",
+      "label": "Sorts pictures into kinds and families",
+      "level": "good"
+    }
+  ],
+  "runtime": "atlas-onnx",
+  "source": {
+    "name": "SigLIP by Google, ONNX conversion by Xenova",
+    "url": "https://huggingface.co/Xenova/siglip-base-patch16-224"
+  },
+  "licence": {
+    "name": "Apache 2.0",
+    "url": "https://huggingface.co/google/siglip-base-patch16-224/blob/main/LICENSE",
+    "commercialUse": "yes",
+    "summary": "Free to use and share, including commercially, with the licence notice kept."
+  },
+  "files": [],
+  "requirements": {
+    "minMemoryGB": 0,
+    "recommendedMemoryGB": 2,
+    "os": [
+      "win32"
+    ]
+  },
+  "dependsOn": [],
+  "provides": [
+    "search"
+  ],
+  "workflows": [],
+  "verification": {
+    "status": "verified",
+    "checks": [
+      {
+        "hardware": "NVIDIA GeForce RTX 2080 (8 GB), Windows 11 x64",
+        "date": "2026-11",
+        "result": "Embedded libraries, searched, built families and ranked pictures in the real packaged Atlas",
+        "how": "Atlas end-to-end tests (scripts/e2e-families.mjs, e2e-smart.mjs, e2e-curation.mjs) on the packaged application"
+      }
+    ]
+  },
+  "install": {
+    "mode": "atlas",
+    "approxBytes": 410000000,
+    "instructions": [
+      "Atlas installs this itself: choose “Turn on image understanding” when Atlas offers it."
+    ]
+  },
+  "added": "2026-11-20"
+}

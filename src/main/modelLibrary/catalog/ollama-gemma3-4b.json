@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "id": "ollama-gemma3-4b",
+  "name": "Gemma 3 4B (vision)",
+  "version": "gemma3:4b via Ollama",
+  "summary": "A capable small vision model for descriptions, composition and lighting notes.",
+  "details": "Google’s Gemma 3 in its 4-billion-parameter form (about 3.3 GB) can look at pictures. A good balance for describing composition, light and subjects on a mainstream graphics card, privately. Runs in Ollama.",
+  "categories": [
+    "understanding"
+  ],
+  "capabilities": [
+    {
+      "id": "describe-in-words",
+      "label": "Describes a picture in words",
+      "level": "good"
+    },
+    {
+      "id": "answer-questions",
+      "label": "Answers questions about a picture",
+      "level": "good"
+    },
+    {
+      "id": "critique",
+      "label": "Artistic analysis of composition and light",
+      "level": "partial"
+    }
+  ],
+  "runtime": "ollama",
+  "source": {
+    "name": "Gemma 3 on the Ollama library",
+    "url": "https://ollama.com/library/gemma3"
+  },
+  "licence": {
+    "name": "Gemma Terms of Use",
+    "url": "https://ai.google.dev/gemma/terms",
+    "commercialUse": "conditions",
+    "summary": "Free to use, including commercially, under Google’s terms and prohibited-use policy. Read them before use."
+  },
+  "files": [],
+  "requirements": {
+    "minMemoryGB": 4,
+    "recommendedMemoryGB": 6,
+    "os": [
+      "win32"
+    ]
+  },
+  "dependsOn": [],
+  "provides": [
+    "describe"
+  ],
+  "workflows": [],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not run this model."
+  },
+  "install": {
+    "mode": "ollama",
+    "pullName": "gemma3:4b",
+    "approxBytes": 3300000000,
+    "instructions": [
+      "Install Ollama from https://ollama.com, then press Install here (or run: ollama pull gemma3:4b).",
+      "Atlas can ask your own Ollama to download it (with your approval). Atlas cannot make a language model look at pictures unless the model is a vision model, as this one is."
+    ]
+  },
+  "added": "2026-11-20"
+}

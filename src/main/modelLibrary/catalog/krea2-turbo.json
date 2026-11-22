@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "id": "krea2-turbo",
+  "name": "Krea 2 Turbo",
+  "version": "Krea 2 Turbo (8-step), nvfp4 or int8 build",
+  "summary": "A fast, high-quality model; its 4-bit build suits RTX 50-series cards.",
+  "details": "Krea’s second-generation open model in its fast “Turbo” form. Two builds are listed because the best one depends on the graphics card: a 4-bit (nvfp4) build of 7.7 GB that only RTX 50-series (Blackwell) cards compute natively, and an 8-bit (int8) build of 13.5 GB that runs on earlier cards. Atlas has no built-in workflow for it yet: use it through your own ComfyUI workflow files, which Atlas runs for you.",
+  "categories": [
+    "generation",
+    "photoreal",
+    "artistic"
+  ],
+  "capabilities": [
+    {
+      "id": "text-to-image",
+      "label": "Pictures from a description",
+      "level": "good"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "Krea 2, ComfyUI files by Comfy-Org",
+    "url": "https://huggingface.co/Comfy-Org/Krea-2"
+  },
+  "licence": {
+    "name": "Krea 2 Community License v1",
+    "url": "https://huggingface.co/krea/Krea-2-Turbo/blob/main/LICENSE.pdf",
+    "commercialUse": "conditions",
+    "summary": "Free for personal and research use; commercial use has conditions. Read the licence before using results commercially."
+  },
+  "files": [],
+  "variants": [
+    {
+      "id": "nvfp4",
+      "label": "4-bit (nvfp4): RTX 50-series only, 7.7 GB",
+      "requirements": {
+        "gpuFamilies": [
+          "blackwell"
+        ],
+        "precision": "fp4",
+        "minMemoryGB": 12,
+        "recommendedMemoryGB": 16
+      },
+      "files": [
+        {
+          "key": "krea2-turbo-nvfp4",
+          "name": "krea2_turbo_nvfp4.safetensors",
+          "folder": "diffusion_models",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_nvfp4.safetensors",
+          "bytes": 7673668448,
+          "sha256": "61527003b2d537055494d01bc8efe51d6e86e64192ba23e3721a5647231fe394"
+        },
+        {
+          "key": "qwen3vl-4b-fp8",
+          "name": "qwen3vl_4b_fp8_scaled.safetensors",
+          "folder": "text_encoders",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+          "bytes": 5242467968,
+          "sha256": "54bd5144df0bbc25dd6ccadfcb826b521445a1b06ae5a42570bdd2974ca87094"
+        },
+        {
+          "key": "qwen-image-vae",
+          "name": "qwen_image_vae.safetensors",
+          "folder": "vae",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
+          "bytes": 253806246,
+          "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f"
+        }
+      ]
+    },
+    {
+      "id": "int8",
+      "label": "8-bit (int8): most NVIDIA cards, 13.5 GB",
+      "requirements": {
+        "minMemoryGB": 12,
+        "recommendedMemoryGB": 16
+      },
+      "files": [
+        {
+          "key": "krea2-turbo-int8",
+          "name": "krea2_turbo_int8_convrot.safetensors",
+          "folder": "diffusion_models",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_int8_convrot.safetensors",
+          "bytes": 13492686496,
+          "sha256": "8e4eeda70dd5037ab1ba2bef6b417f9f901e26093117cf397f741fc1fdaaf3f1"
+        },
+        {
+          "key": "qwen3vl-4b-fp8",
+          "name": "qwen3vl_4b_fp8_scaled.safetensors",
+          "folder": "text_encoders",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+          "bytes": 5242467968,
+          "sha256": "54bd5144df0bbc25dd6ccadfcb826b521445a1b06ae5a42570bdd2974ca87094"
+        },
+        {
+          "key": "qwen-image-vae",
+          "name": "qwen_image_vae.safetensors",
+          "folder": "vae",
+          "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
+          "bytes": 253806246,
+          "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f"
+        }
+      ]
+    }
+  ],
+  "requirements": {
+    "archs": [
+      "x64"
+    ],
+    "os": [
+      "win32"
+    ],
+    "comfyMin": "0.45"
+  },
+  "dependsOn": [],
+  "provides": [],
+  "workflows": [],
+  "verification": {
+    "status": "experimental",
+    "checks": [],
+    "note": "Atlas does not run this model itself. Neither build has been run through Atlas; the 4-bit build has not been seen on an RTX 50-series card by anyone on this project."
+  },
+  "install": {
+    "mode": "managed"
+  },
+  "added": "2026-11-20"
+}

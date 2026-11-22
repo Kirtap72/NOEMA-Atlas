@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "id": "sd15-tile-controlnet",
+  "name": "Tile ControlNet for Stable Diffusion 1.5",
+  "version": "ControlNet 1.1 tile (fp16)",
+  "summary": "Holds a picture’s structure while it is repainted, for edits that keep the composition.",
+  "details": "A ControlNet “tile” model. With it, Atlas’s Edit repaints a picture from your description while the composition stays; it also drives the detail pass of creative upscaling and the selective (inpainting) edits. Needs Stable Diffusion 1.5.",
+  "categories": [
+    "editing",
+    "upscaling"
+  ],
+  "capabilities": [
+    {
+      "id": "structure-keeping-edit",
+      "label": "Edits while keeping the composition",
+      "level": "good"
+    },
+    {
+      "id": "detail-pass",
+      "label": "Adds detail when enlarging",
+      "level": "good"
+    },
+    {
+      "id": "inpainting",
+      "label": "Repaints a painted area",
+      "level": "good"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "ControlNet v1.1 fp16 (comfyanonymous on Hugging Face)",
+    "url": "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors"
+  },
+  "licence": {
+    "name": "CreativeML Open RAIL-M",
+    "url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
+    "commercialUse": "conditions",
+    "summary": "Free to use, including commercially, but you agree not to use it to harm people or to break the law. The full list of restrictions is in the licence."
+  },
+  "files": [
+    {
+      "key": "tile",
+      "name": "control_v11f1e_sd15_tile_fp16.safetensors",
+      "folder": "controlnet",
+      "url": "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11f1e_sd15_tile_fp16.safetensors",
+      "bytes": 722601104,
+      "sha256": "2f31868eedb243a77932e3c63907a6ba0a2058b6d65b5c27b89ee1b7f618ea33"
+    }
+  ],
+  "requirements": {
+    "minMemoryGB": 4,
+    "recommendedMemoryGB": 6,
+    "archs": [
+      "x64"
+    ],
+    "os": [
+      "win32"
+    ],
+    "precision": "fp16"
+  },
+  "dependsOn": [
+    "sd15-base"
+  ],
+  "provides": [
+    "edit"
+  ],
+  "workflows": [
+    {
+      "id": "atlas:tile-edit",
+      "name": "Atlas edit, keeping the structure",
+      "task": "Change the look, keep the composition"
+    },
+    {
+      "id": "atlas:inpaint",
+      "name": "Atlas selective edit",
+      "task": "Repaint only a painted area"
+    }
+  ],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not installed or run this on a real computer in the model-library test."
+  },
+  "install": {
+    "mode": "managed"
+  },
+  "legacyPackage": "edit",
+  "added": "2026-11-20"
+}

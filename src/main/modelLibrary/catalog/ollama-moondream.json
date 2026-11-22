@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "id": "ollama-moondream",
+  "name": "Moondream (small vision model)",
+  "version": "moondream 1.8B via Ollama",
+  "summary": "A tiny vision model that can describe a picture and answer questions about it, on this computer.",
+  "details": "A very small vision-language model (about 1.7 GB) for quick, private descriptions and simple questions about pictures. It is far less capable than a large cloud model, but it runs on almost any graphics card and nothing leaves this computer. Runs in Ollama, which you install yourself from ollama.com.",
+  "categories": [
+    "understanding"
+  ],
+  "capabilities": [
+    {
+      "id": "describe-in-words",
+      "label": "Describes a picture in words",
+      "level": "partial"
+    },
+    {
+      "id": "answer-questions",
+      "label": "Answers simple questions about a picture",
+      "level": "partial"
+    },
+    {
+      "id": "critique",
+      "label": "Detailed artistic analysis",
+      "level": "weak"
+    }
+  ],
+  "runtime": "ollama",
+  "source": {
+    "name": "Moondream on the Ollama library",
+    "url": "https://ollama.com/library/moondream"
+  },
+  "licence": {
+    "name": "Apache 2.0",
+    "url": "https://ollama.com/library/moondream",
+    "commercialUse": "yes",
+    "summary": "Free to use and share, including commercially, with the licence notice kept."
+  },
+  "files": [],
+  "requirements": {
+    "minMemoryGB": 2,
+    "recommendedMemoryGB": 4,
+    "os": [
+      "win32"
+    ]
+  },
+  "dependsOn": [],
+  "provides": [
+    "describe"
+  ],
+  "workflows": [],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not run this model."
+  },
+  "install": {
+    "mode": "ollama",
+    "pullName": "moondream",
+    "approxBytes": 1700000000,
+    "instructions": [
+      "Install Ollama from https://ollama.com, then press Install here (or run: ollama pull moondream).",
+      "Atlas can ask your own Ollama to download it (with your approval). Atlas cannot make a language model look at pictures unless the model is a vision model, as this one is."
+    ]
+  },
+  "added": "2026-11-20"
+}

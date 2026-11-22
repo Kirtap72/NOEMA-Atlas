@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "id": "ollama-qwen25vl-7b",
+  "name": "Qwen2.5-VL 7B (vision)",
+  "version": "qwen2.5vl:7b via Ollama",
+  "summary": "A stronger local vision model for detailed analysis, for cards with 8 GB or more.",
+  "details": "Alibaba’s Qwen2.5-VL in its 7-billion-parameter form (about 6 GB) reads pictures in more detail than the smaller models and is better at pointing out specific features. Needs a graphics card with about 8 GB or more. Runs in Ollama.",
+  "categories": [
+    "understanding"
+  ],
+  "capabilities": [
+    {
+      "id": "describe-in-words",
+      "label": "Describes a picture in detail",
+      "level": "good"
+    },
+    {
+      "id": "answer-questions",
+      "label": "Answers detailed questions about a picture",
+      "level": "good"
+    },
+    {
+      "id": "critique",
+      "label": "Artistic analysis",
+      "level": "partial"
+    }
+  ],
+  "runtime": "ollama",
+  "source": {
+    "name": "Qwen2.5-VL on the Ollama library",
+    "url": "https://ollama.com/library/qwen2.5vl"
+  },
+  "licence": {
+    "name": "Apache 2.0",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct/blob/main/LICENSE",
+    "commercialUse": "yes",
+    "summary": "Free to use and share, including commercially, with the licence notice kept."
+  },
+  "files": [],
+  "requirements": {
+    "minMemoryGB": 6,
+    "recommendedMemoryGB": 10,
+    "os": [
+      "win32"
+    ]
+  },
+  "dependsOn": [],
+  "provides": [
+    "describe"
+  ],
+  "workflows": [],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not run this model."
+  },
+  "install": {
+    "mode": "ollama",
+    "pullName": "qwen2.5vl:7b",
+    "approxBytes": 6000000000,
+    "instructions": [
+      "Install Ollama from https://ollama.com, then press Install here (or run: ollama pull qwen2.5vl:7b).",
+      "Atlas can ask your own Ollama to download it (with your approval). Atlas cannot make a language model look at pictures unless the model is a vision model, as this one is."
+    ]
+  },
+  "added": "2026-11-20"
+}

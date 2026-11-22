@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "id": "realesrgan-x4plus",
+  "name": "Real-ESRGAN x4 (plus)",
+  "version": "RealESRGAN_x4plus (v0.1.0)",
+  "summary": "A fast, faithful 4× enlarger for photographs and artwork.",
+  "details": "Enlarges a picture four times while sharpening and cleaning it, without inventing new content. It is the enlargement step of Atlas’s creative upscaling; the optional detail pass is added by the tile ControlNet. Large pictures are processed in tiles so they fit in modest graphics memory.",
+  "categories": [
+    "upscaling"
+  ],
+  "capabilities": [
+    {
+      "id": "upscale-4x",
+      "label": "Enlarges 4×",
+      "level": "good"
+    },
+    {
+      "id": "adds-new-detail",
+      "label": "Adds new believable detail",
+      "level": "partial"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "Real-ESRGAN by xinntao (GitHub release v0.1.0)",
+    "url": "https://github.com/xinntao/Real-ESRGAN"
+  },
+  "licence": {
+    "name": "BSD 3-Clause",
+    "url": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+    "commercialUse": "yes",
+    "summary": "Free to use and share, including commercially, with the copyright notice kept."
+  },
+  "files": [
+    {
+      "key": "esrgan",
+      "name": "RealESRGAN_x4plus.pth",
+      "folder": "upscale_models",
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+      "bytes": 67040989,
+      "sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+    }
+  ],
+  "requirements": {
+    "minMemoryGB": 2,
+    "recommendedMemoryGB": 4,
+    "archs": [
+      "x64"
+    ],
+    "os": [
+      "win32"
+    ]
+  },
+  "dependsOn": [],
+  "provides": [
+    "upscale"
+  ],
+  "workflows": [
+    {
+      "id": "atlas:esrgan",
+      "name": "Atlas enlargement",
+      "task": "Enlarge a picture"
+    },
+    {
+      "id": "atlas:detail-upscale",
+      "name": "Atlas detail upscale",
+      "task": "Enlarge and add detail (with the tile ControlNet)"
+    }
+  ],
+  "verification": {
+    "status": "documented",
+    "checks": [
+      {
+        "hardware": "NVIDIA GeForce RTX 2080 (8 GB), Windows 11 x64",
+        "date": "2026-11-20",
+        "result": "Real download from the official source into a scratch folder, SHA-256 matched the catalogue, then removed cleanly.",
+        "how": "Atlas installer test (tests/modelLibraryReal.test.ts). Image enlargement with this file was not re-run in this test."
+      }
+    ],
+    "note": "Installation verified on a real computer; execution is documented by its makers."
+  },
+  "install": {
+    "mode": "managed"
+  },
+  "added": "2026-11-20"
+}

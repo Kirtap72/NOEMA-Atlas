@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "id": "sd15-base",
+  "name": "Stable Diffusion 1.5",
+  "version": "1.5 (fp16, EMA weights)",
+  "summary": "A small, general-purpose image model that runs on almost any graphics card.",
+  "details": "The model Atlas’s Create package is built on. It makes pictures of about 512 to 768 pixels on a side in a broad, painterly range of styles (not photographic perfection), which Atlas’s upscaling can then enlarge. It is the lightest way to get real AI image making, and the base for Atlas’s tile-ControlNet editing.",
+  "categories": [
+    "generation",
+    "artistic"
+  ],
+  "capabilities": [
+    {
+      "id": "text-to-image",
+      "label": "Makes pictures from a description",
+      "level": "good"
+    },
+    {
+      "id": "image-to-image",
+      "label": "Repaints a picture from a description",
+      "level": "good"
+    },
+    {
+      "id": "photoreal",
+      "label": "Photographic realism",
+      "level": "weak"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "Stable Diffusion v1.5 archive (Comfy-Org on Hugging Face)",
+    "url": "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive"
+  },
+  "licence": {
+    "name": "CreativeML Open RAIL-M",
+    "url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
+    "commercialUse": "conditions",
+    "summary": "Free to use, including commercially, but you agree not to use it to harm people or to break the law. The full list of restrictions is in the licence."
+  },
+  "files": [
+    {
+      "key": "sd15",
+      "name": "v1-5-pruned-emaonly-fp16.safetensors",
+      "folder": "checkpoints",
+      "url": "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors",
+      "bytes": 2132696762,
+      "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916"
+    }
+  ],
+  "requirements": {
+    "minMemoryGB": 4,
+    "recommendedMemoryGB": 6,
+    "archs": [
+      "x64"
+    ],
+    "os": [
+      "win32"
+    ],
+    "precision": "fp16"
+  },
+  "dependsOn": [],
+  "provides": [
+    "create"
+  ],
+  "workflows": [
+    {
+      "id": "atlas:generate",
+      "name": "Atlas image generation",
+      "task": "Create a picture from a prompt and your moodboard"
+    },
+    {
+      "id": "atlas:img2img",
+      "name": "Atlas variation",
+      "task": "Make a variation of a picture"
+    }
+  ],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not installed or run this on a real computer in the model-library test."
+  },
+  "install": {
+    "mode": "managed"
+  },
+  "legacyPackage": "create",
+  "added": "2026-11-20"
+}

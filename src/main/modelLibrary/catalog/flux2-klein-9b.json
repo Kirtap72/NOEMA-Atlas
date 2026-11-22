@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "id": "flux2-klein-9b",
+  "name": "FLUX.2 [klein] 9B",
+  "version": "FLUX.2 [klein] 9B with Qwen3 8B text encoder",
+  "summary": "The larger FLUX.2 [klein]: finer detail and better reference handling on a card with plenty of memory.",
+  "details": "The 9-billion-parameter sibling of the 4B model, for graphics cards with 16 GB or more (or large unified memory). Atlas’s reference workflow uses it the same way once it is installed. Its licence is non-commercial, and the download needs a free Hugging Face login to accept that licence, so Atlas shows the official steps instead of downloading it for you.",
+  "categories": [
+    "reference",
+    "generation",
+    "editing"
+  ],
+  "capabilities": [
+    {
+      "id": "reference-atmosphere",
+      "label": "Light, colour and atmosphere from a reference",
+      "level": "good"
+    },
+    {
+      "id": "reference-subject",
+      "label": "A subject or form from a reference",
+      "level": "good"
+    }
+  ],
+  "runtime": "comfyui",
+  "source": {
+    "name": "FLUX.2 [klein] 9B by Black Forest Labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B"
+  },
+  "licence": {
+    "name": "FLUX Non-Commercial License v2.1",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/blob/main/LICENSE.md",
+    "commercialUse": "no",
+    "summary": "Free for non-commercial and non-production use only. You must accept it on Hugging Face (free login) before downloading.",
+    "acceptance": "Accept the licence on the model page while logged in to Hugging Face."
+  },
+  "files": [],
+  "requirements": {
+    "minMemoryGB": 16,
+    "recommendedMemoryGB": 24,
+    "archs": [
+      "x64",
+      "arm64"
+    ],
+    "os": [
+      "win32"
+    ],
+    "comfyMin": "0.45",
+    "notes": "About 18 GB for the model plus 8.7 GB for the fp8 text encoder."
+  },
+  "dependsOn": [],
+  "provides": [
+    "reference",
+    "create",
+    "edit"
+  ],
+  "workflows": [
+    {
+      "id": "atlas:reference-flux2",
+      "name": "Atlas reference conditioning",
+      "task": "Make a new picture from reference pictures with roles"
+    }
+  ],
+  "verification": {
+    "status": "documented",
+    "checks": [],
+    "note": "Atlas has not run the 9B model. Its reference workflow is the same as the 4B model’s."
+  },
+  "install": {
+    "mode": "manual",
+    "manualReason": "The licence must be accepted with a Hugging Face login, so Atlas cannot download it for you.",
+    "approxBytes": 27000000000,
+    "instructions": [
+      "Open the model page and accept the licence while logged in to Hugging Face: https://huggingface.co/black-forest-labs/FLUX.2-klein-9B",
+      "Download flux-2-klein-9b.safetensors (about 18 GB) into ComfyUI\\models\\diffusion_models.",
+      "Download qwen_3_8b_fp8mixed.safetensors (about 8.7 GB) into ComfyUI\\models\\text_encoders from https://huggingface.co/Comfy-Org/Flux-2-Klein-9B, and flux2-vae.safetensors into ComfyUI\\models\\vae.",
+      "Restart ComfyUI, then open Atlas’s Model Library and press “Check my ComfyUI”. Atlas lists the model as available when it finds the files."
+    ]
+  },
+  "added": "2026-11-20"
+}
