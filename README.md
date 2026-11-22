@@ -3,6 +3,8 @@
 **A quiet, private home for the images that stay with you.**
 Organize, discover, arrange and refine your pictures on your own computer — your originals stay untouched.
 
+**[Official website](https://patrickkarlsson.se/program)** · [Download](https://github.com/Kirtap72/NOEMA-Atlas/releases/latest) · [User manual](docs/USER-MANUAL.md) · [SourceForge](https://sourceforge.net/projects/noema-atlas/)
+
 <p align="center">
   <img src="docs/images/01-the-collection.png" alt="The Atlas Collection: a dark interface with a left menu of rooms and a wide grid of surreal, atmospheric artworks, many marked as favorites" width="100%">
 </p>
