@@ -41,7 +41,7 @@ does not track you.
 
 ## Download and install
 
-1. Open the **[Releases](https://github.com/Kirtap72/NOEMA-Atlas/releases/latest)** page (or [download directly](https://github.com/Kirtap72/NOEMA-Atlas/releases/download/v1.0.0/NOEMA-Atlas-1.0.0-portable.exe)).
+1. Open the **[Releases](https://github.com/Kirtap72/NOEMA-Atlas/releases/latest)** page (or [download directly](https://github.com/Kirtap72/NOEMA-Atlas/releases/download/v1.0.0/NOEMA-Atlas-1.0.0-portable.exe)). The same file is also on [SourceForge](https://sourceforge.net/projects/noema-atlas/files/NOEMA%20Atlas%201.0.0/).
 2. Download **`NOEMA-Atlas-1.0.0-portable.exe`** (about 200 MB). There is no installer: put the file anywhere and double-click it.
 3. If Windows says **"Windows protected your PC"**, click **More info → Run anyway**. This appears because the file is not signed.
 4. The first start takes a few seconds while Windows unpacks the program.
